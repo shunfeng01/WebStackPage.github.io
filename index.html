@@ -1,79 +1,158 @@
 <!DOCTYPE html>
-<html lang="zh">
-
+<html lang="zh-CN">
 <head>
-    <link rel="shortcut icon" href="./assets/images/favicon.png">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    
-    <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?c05bb16ea908292af9f6c513087a1cc3";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-    </script>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "ca-pub-8550836177608334",
-        enable_page_level_ads: true
-    });
-    </script>
-    <meta charset="UTF-8">
-    <title>WebStack.cc - 设计师网址导航</title>
-    <script>
-    if (navigator.appName == "Netscape") {
-        var language = navigator.language;
-    } else {
-        var language = navigator.browserLanguage;
-
-    }
-
-    if (language.indexOf("en") > -1) {
-        document.location.href = "en/index.html";
-    } else if (language.indexOf("zh") > -1) {
-        document.location.href = "cn/index.html";
-    } else {
-        document.location.href = "en/index.html";
-
-    }
-    </script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="viggo" />
-    <title>WebStack.cc - Collection of resources and tools for Designers</title>
-    <meta name="keywords" content="UI设计,UI设计素材,设计导航,网址导航,设计资源,创意导航,创意网站导航,设计师网址大全,设计素材大全,设计师导航,UI设计资源,优秀UI设计欣赏,设计师导航,设计师网址大全,设计师网址导航,产品经理网址导航,UX师网址导航,www.webstack.cc">
-    <meta name="description" content="WebStack - 收集国内外优秀设计网站、UI设计资源网站、灵感创意网站、Resources网站，定时更新分享优质产品设计书签。www.webstack.cc">
-    
-    <!-- / FB Open Graph -->
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="http://www.webstack.cc/">
-    <meta property="og:title" content="WebStack - 收集国内外优秀设计网站、UI设计资源网站、灵感创意网站、Resources网站，定时更新分享优质产品设计书签。www.webstack.cc">
-    <meta property="og:description" content="UI设计,UI设计素材,设计导航,网址导航,设计资源,创意导航,创意网站导航,设计师网址大全,设计素材大全,设计师导航,UI设计资源,优秀UI设计欣赏,设计师导航,设计师网址大全,设计师网址导航,产品经理网址导航,UX师网址导航,www.webstack.cc">
-    <meta property="og:image" content="http://www.webstack.cc/assets/images/webstack_banner_cn.png">
-    <meta property="og:site_name" content="WebStack - 收集国内外优秀设计网站、UI设计资源网站、灵感创意网站、Resources网站，定时更新分享优质产品设计书签。www.webstack.cc">
-    <!-- / Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="WebStack - 收集国内外优秀设计网站、UI设计资源网站、灵感创意网站、Resources网站，定时更新分享优质产品设计书签。www.webstack.cc">
-    <meta name="twitter:description" content="UI设计,UI设计素材,设计导航,网址导航,设计资源,创意导航,创意网站导航,设计师网址大全,设计素材大全,设计师导航,UI设计资源,优秀UI设计欣赏,设计师导航,设计师网址大全,设计师网址导航,产品经理网址导航,UX师网址导航,www.webstack.cc">
-    <meta name="twitter:image" content="http://www.webstack.cc/assets/images/webstack_banner_cn.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>盘神AI资源站 - 影视 / 软件 / 学习资料 / AI / 网赚 / 教程</title>
+<link rel="shortcut icon" href="./assets/images/favicon.png">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root{
+    --bg1:#1a1035; --bg2:#2b1b5e; --bg3:#0f2044;
+    --card:rgba(255,255,255,.07); --card-border:rgba(255,255,255,.14);
+    --txt:#eef0ff; --sub:#a9a6d6; --accent:#8b7bff;
+  }
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Microsoft YaHei",sans-serif;
+    color:var(--txt);
+    background:linear-gradient(135deg,var(--bg1),var(--bg2) 45%,var(--bg3));
+    min-height:100vh; padding:24px 16px 60px;
+  }
+  .wrap{max-width:1100px;margin:0 auto;}
+  header{text-align:center;margin-bottom:26px;}
+  header h1{font-size:34px;letter-spacing:2px;background:linear-gradient(90deg,#b8a8ff,#7fd0ff,#ff9ed2);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  header p{color:var(--sub);margin-top:8px;font-size:15px;}
+  .search{margin:18px auto 0;max-width:560px;position:relative;}
+  .search input{
+    width:100%;padding:13px 18px;border-radius:30px;border:1px solid var(--card-border);
+    background:rgba(0,0,0,.25);color:var(--txt);font-size:15px;outline:none;
+  }
+  .search input::placeholder{color:#8b87b8;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:18px;margin-top:10px;}
+  .cat{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:18px;backdrop-filter:blur(8px);transition:.2s;}
+  .cat:hover{border-color:var(--accent);transform:translateY(-3px);}
+  .cat h2{font-size:18px;display:flex;align-items:center;gap:9px;margin-bottom:14px;}
+  .cat h2 .ico{font-size:22px;}
+  .cat ul{list-style:none;}
+  .cat li{margin:8px 0;}
+  .cat a{
+    display:flex;align-items:center;gap:9px;color:var(--txt);text-decoration:none;
+    padding:9px 12px;border-radius:10px;background:rgba(0,0,0,.18);font-size:14.5px;transition:.15s;
+  }
+  .cat a:hover{background:rgba(139,123,255,.22);color:#fff;}
+  .cat a .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none;}
+  .cat a.todo{color:var(--sub);font-style:italic;}
+  .cat a.todo .dot{background:#55517a;}
+  footer{text-align:center;margin-top:40px;color:var(--sub);font-size:13.5px;line-height:1.9;}
+  footer a{color:var(--accent);text-decoration:none;}
+  .empty{display:none;text-align:center;color:var(--sub);margin:30px;}
+  @media(max-width:520px){header h1{font-size:26px;}.grid{grid-template-columns:1fr;}}
+</style>
 </head>
-
 <body>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111463289-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
+<div class="wrap">
+  <header>
+    <h1>盘神 AI 资源站</h1>
+    <p>影视 · 软件 · 学习资料 · AI工具 · 网赚项目 · 教程课程 · 文章资讯（资源持续更新中）</p>
+    <div class="search"><input id="q" type="text" placeholder="🔍 输入关键词搜索资源 / 分类…"></div>
+  </header>
 
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+  <div class="grid" id="grid">
 
-    gtag('config', 'UA-111463289-1');
-    </script>
+    <section class="cat" data-cat="影视资源">
+      <h2><span class="ico">🎬</span>影视资源</h2>
+      <ul>
+        <li><a href="#" class="todo"><span class="dot"></span>资源位 1（待添加链接）</a></li>
+        <li><a href="#" class="todo"><span class="dot"></span>资源位 2（待添加链接）</a></li>
+        <li><a href="#" class="todo"><span class="dot"></span>资源位 3（待添加链接）</a></li>
+        <li><a href="#" class="todo"><span class="dot"></span>资源位 4（待添加链接）</a></li>
+      </ul>
+    </section>
+
+    <section class="cat" data-cat="软件工具">
+      <h2><span class="ico">💻</span>软件工具</h2>
+      <ul>
+        <li><a href="#" class="todo"><span class="dot"></span>资源位 1（待添加链接）</a></li>
+        <li><a href="#" class="todo"><span class="dot"></span>资源位 2（待添加链接）</a></li>
+        <li><a href="#" class="todo"><span class="dot"></span>资源位 3（待添加链接）</a></li>
+        <li><a href="#" class="todo"><span class="dot"></span>资源位 4（待添加链接）</a></li>
+      </ul>
+    </section>
+
+    <section class="cat" data-cat="学习资料">
+      <h2><span class="ico">📚</span>学习资料</h2>
+      <ul>
+        <li><a href="#" class="todo"><span class="dot"></span>资源位 1（待添加链接）</a></li>
+        <li><a href="#" class="todo"><span class="dot"></span>资源位 2（待添加链接）</a></li>
+        <li><a href="#" class="todo"><span class="dot"></span>资源位 3（待添加链接）</a></li>
+        <li><a href="#" class="todo"><span class="dot"></span>资源位 4（待添加链接）</a></li>
+      </ul>
+    </section>
+
+    <section class="cat" data-cat="AI工具">
+      <h2><span class="ico">🤖</span>AI工具</h2>
+      <ul>
+        <li><a href="#" class="todo"><span class="dot"></span>资源位 1（待添加链接）</a></li>
+        <li><a href="#" class="todo"><span class="dot"></span>资源位 2（待添加链接）</a></li>
+        <li><a href="#" class="todo"><span class="dot"></span>资源位 3（待添加链接）</a></li>
+        <li><a href="#" class="todo"><span class="dot"></span>资源位 4（待添加链接）</a></li>
+      </ul>
+    </section>
+
+    <section class="cat" data-cat="网赚项目">
+      <h2><span class="ico">💰</span>网赚项目</h2>
+      <ul>
+        <li><a href="#" class="todo"><span class="dot"></span>资源位 1（待添加链接）</a></li>
+        <li><a href="#" class="todo"><span class="dot"></span>资源位 2（待添加链接）</a></li>
+        <li><a href="#" class="todo"><span class="dot"></span>资源位 3（待添加链接）</a></li>
+        <li><a href="#" class="todo"><span class="dot"></span>资源位 4（待添加链接）</a></li>
+      </ul>
+    </section>
+
+    <section class="cat" data-cat="教程课程">
+      <h2><span class="ico">🎓</span>教程课程</h2>
+      <ul>
+        <li><a href="#" class="todo"><span class="dot"></span>资源位 1（待添加链接）</a></li>
+        <li><a href="#" class="todo"><span class="dot"></span>资源位 2（待添加链接）</a></li>
+        <li><a href="#" class="todo"><span class="dot"></span>资源位 3（待添加链接）</a></li>
+        <li><a href="#" class="todo"><span class="dot"></span>资源位 4（待添加链接）</a></li>
+      </ul>
+    </section>
+
+    <section class="cat" data-cat="文章资讯">
+      <h2><span class="ico">📰</span>文章资讯</h2>
+      <ul>
+        <li><a href="#" class="todo"><span class="dot"></span>资源位 1（待添加链接）</a></li>
+        <li><a href="#" class="todo"><span class="dot"></span>资源位 2（待添加链接）</a></li>
+        <li><a href="#" class="todo"><span class="dot"></span>资源位 3（待添加链接）</a></li>
+        <li><a href="#" class="todo"><span class="dot"></span>资源位 4（待添加链接）</a></li>
+      </ul>
+    </section>
+
+  </div>
+  <p class="empty" id="empty">没有找到匹配的资源，换个关键词试试～</p>
+
+  <footer>
+    盘神 AI 资源站 · 资源整理分享，持续更新<br>
+    合作 / 投稿邮箱：<a href="mailto:3013628741@qq.com">3013628741@qq.com</a>
+  </footer>
+</div>
+
+<script>
+  const box=document.getElementById('q');
+  const cats=document.querySelectorAll('.cat');
+  const empty=document.getElementById('empty');
+  box.addEventListener('input',()=>{
+    const k=box.value.trim().toLowerCase();
+    let shown=0;
+    cats.forEach(c=>{
+      const txt=c.textContent.toLowerCase();
+      const ok=!k||txt.includes(k);
+      c.style.display=ok?'':'none';
+      if(ok)shown++;
+    });
+    empty.style.display=shown?'none':'block';
+  });
+</script>
 </body>
-
 </html>
